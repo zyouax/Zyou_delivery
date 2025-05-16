@@ -1,0 +1,12 @@
+#[cfg(feature = "colissimo")]
+pub mod colissimo;
+#[cfg(feature = "fedex")]
+pub mod fedex;
+#[cfg(feature = "chronopost")]
+pub mod chronopost;
+#[cfg(feature = "tnt")]
+pub mod tnt;
+#[cfg(feature = "ups")]
+pub mod ups;
+#[cfg(feature = "mondialrelay")]
+pub mod mondialrelay;
