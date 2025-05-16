@@ -23,7 +23,7 @@
 
 ### Annexe
 
-- [Installation](# -installation), Installation via Crate.io ou GitHub
+- [Installation](#-installation), Installation via Crate.io ou GitHub
 - [Utilisation](#-utilisation), Importer et utiliser la bibliothèque
 - [Bon à savoir](#bon-à-savoir), Comment activer les transporteurs
 
