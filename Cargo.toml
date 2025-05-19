@@ -1,0 +1,53 @@
+[package]
+name = "zyou_delivery"
+version = "0.1.0"
+edition = "2024"
+description = "Une bibliothèque Rust modulaire pour interagir avec plusieurs transporteurs de colis"
+authors = ["Zyou"]
+license = "MIT"
+repository = "https://github.com/zyouax/zyou_delivery"
+readme = "README.md"
+keywords = ["shipping", "delivery", "logistics", "parcel", "api"]
+categories = ["api-bindings", "web-programming"]
+
+[lib]
+name = "zyou_delivery"
+path = "src/lib.rs"
+
+[dependencies]
+# Sérialisation/désérialisation
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+serde_yaml = "0.9.33"
+
+# Requêtes HTTP
+reqwest = { version = "0.12.15", features = ["json", "blocking"] }
+url = "2.5.4"
+
+# Gestion des erreurs
+thiserror = "2.0.12"
+anyhow = "1.0.98"
+
+# Utilitaires
+chrono = { version = "0.4.41", features = ["serde"] }
+async-trait = "0.1.88"
+log = "0.4.27"
+uuid = { version = "1.16.0", features = ["v4", "serde"] }
+
+# Génération PDF (pour les étiquettes)
+pdf-canvas = "0.7.0"
+
+[dev-dependencies]
+tokio = { version = "1.45.0", features = ["full"] }
+mockito = "1.7.0"
+rand = "0.9.1"
+pretty_assertions = "1.4.1"
+
+[features]
+default = ["colissimo", "chronopost"]
+colissimo = []
+chronopost = []
+fedex = []
+ups = []
+all = ["colissimo", "chronopost", "fedex", "ups"]
+mock = []
