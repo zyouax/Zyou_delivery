@@ -20,7 +20,8 @@
 </p>
 
 ---
-⚠️ en Développement ⚠️
+<h1 align="center">⚠️ en Développement ⚠️</h1>
+
 ---
 
 ### Annexes
